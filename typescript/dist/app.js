@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var fighters_1 = require("./fighters");
+var baseShips_1 = require("./baseShips");
+var _ = require("lodash");
+console.log(_.pad("TypeScript", 40, "-"));
+var nave = new baseShips_1.Spacecraft('HyperDrive');
+nave.jumpIntoHyperSpace();
+var nave2 = new fighters_1.Milenium(3);
+nave2.jumpIntoHyperSpace();
+var goodForJob = function (nav) { return nav.cargoContainers > 3; };
+console.log("Tem " + nave2.cargoContainers + " containers");
+console.log("\u00C9 boa? " + goodForJob(nave2));
